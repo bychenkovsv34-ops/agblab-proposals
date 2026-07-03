@@ -16,84 +16,45 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box }
   body {
-    background: var(--bg);
-    color: var(--txt);
+    background: var(--bg); color: var(--txt);
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    min-height: 100vh;
-    padding: 48px 20px 64px;
+    font-size: 16px; line-height: 1.6;
+    min-height: 100vh; padding: 48px 20px 64px;
   }
-  .wrap { max-width: 680px; margin: 0 auto; }
+  .wrap { max-width: 720px; margin: 0 auto; }
 
-  .top {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 40px;
-  }
+  .top { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
   .logo-txt {
     font-size: 15px; font-weight: 700;
     background: linear-gradient(120deg, var(--accent), var(--accent2));
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  .back {
-    margin-left: auto; font-size: 13px; color: var(--muted);
-    text-decoration: none;
-  }
+  .back { margin-left: auto; font-size: 13px; color: var(--muted); text-decoration: none; }
   .back:hover { color: var(--txt); }
 
   .tag {
-    display: inline-block;
-    font-size: 11px; font-weight: 700; letter-spacing: .08em;
-    text-transform: uppercase; color: var(--accent);
+    display: inline-block; font-size: 11px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
     background: rgba(255,59,59,.1); border: 1px solid rgba(255,59,59,.25);
-    border-radius: 6px; padding: 3px 10px;
-    margin-bottom: 16px;
+    border-radius: 6px; padding: 3px 10px; margin-bottom: 16px;
   }
+  h1 { font-size: clamp(24px,5vw,34px); font-weight: 700; letter-spacing: -.5px; margin-bottom: 12px; text-wrap: balance; }
+  .lead { color: var(--muted); font-size: 16px; margin-bottom: 40px; text-wrap: balance; }
 
-  h1 {
-    font-size: clamp(24px, 5vw, 34px);
-    font-weight: 700; letter-spacing: -.5px;
-    margin-bottom: 12px; text-wrap: balance;
-  }
-  .lead {
-    color: var(--muted); font-size: 16px;
-    margin-bottom: 40px; text-wrap: balance;
-  }
+  .block { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .block h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; color: var(--txt); }
+  .block p { color: var(--muted); font-size: 15px; line-height: 1.65; }
 
-  .block {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px;
-    margin-bottom: 16px;
-  }
-  .block h2 {
-    font-size: 17px; font-weight: 700;
-    margin-bottom: 12px; color: var(--txt);
-  }
-  .block p {
-    color: var(--muted); font-size: 15px; line-height: 1.65;
-  }
-
-  .flow {
-    display: flex; flex-direction: column; gap: 0;
-    margin-top: 4px;
-  }
-  .flow-step {
-    display: flex; gap: 14px; align-items: flex-start;
-    position: relative; padding-bottom: 18px;
-  }
+  .flow { display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
+  .flow-step { display: flex; gap: 14px; align-items: flex-start; position: relative; padding-bottom: 18px; }
   .flow-step:last-child { padding-bottom: 0; }
   .flow-step:not(:last-child)::after {
-    content: "";
-    position: absolute; left: 15px; top: 32px;
-    width: 2px; bottom: 0;
-    background: var(--border);
+    content: ""; position: absolute; left: 15px; top: 32px;
+    width: 2px; bottom: 0; background: var(--border);
   }
   .flow-num {
     width: 32px; height: 32px; border-radius: 50%;
-    background: rgba(255,59,59,.1);
-    border: 1px solid rgba(255,59,59,.3);
+    background: rgba(255,59,59,.1); border: 1px solid rgba(255,59,59,.3);
     color: var(--accent); font-size: 13px; font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; position: relative; z-index: 1;
@@ -102,52 +63,156 @@
   .flow-title { font-size: 15px; font-weight: 600; color: var(--txt); margin-bottom: 2px; }
   .flow-desc { font-size: 14px; color: var(--muted); }
 
-  .list {
-    list-style: none;
-    display: flex; flex-direction: column; gap: 10px;
-    margin-top: 4px;
-  }
-  .list li {
-    display: flex; gap: 10px; align-items: flex-start;
-    color: var(--muted); font-size: 15px;
-  }
-  .list li::before {
-    content: "→";
-    color: var(--accent); flex-shrink: 0;
-    margin-top: 1px;
-  }
+  .list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .list li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: 15px; }
+  .list li::before { content: "→"; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
 
   .divider { height: 1px; background: var(--border); margin: 36px 0; }
 
-  .cta p {
-    color: var(--muted); font-size: 15px; margin-bottom: 20px;
-    text-wrap: balance;
-  }
+  .cta p { color: var(--muted); font-size: 15px; margin-bottom: 20px; text-wrap: balance; }
   .cta strong { color: var(--txt); }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent); color: #fff;
-    font-weight: 700; font-size: 15px;
-    padding: 13px 26px; border-radius: 12px;
-    text-decoration: none;
+    background: var(--accent); color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px 26px; border-radius: 12px; text-decoration: none;
     transition: transform .15s, box-shadow .15s;
   }
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(255,59,59,.3);
-  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255,59,59,.3); }
 
   .footer {
-    margin-top: 56px; padding-top: 24px;
-    border-top: 1px solid var(--border);
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
     color: var(--muted); font-size: 13px;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 8px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   }
   .footer a { color: var(--muted); text-decoration: none; }
   .footer a:hover { color: var(--txt); }
 
-  @media(max-width: 480px) {
+  /* ── Схема MVP ── */
+  .scheme-wrap {
+    margin: 8px 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .scheme-head {
+    padding: 18px 24px 14px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+  }
+  .scheme-head-label {
+    font-size: 11px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+  }
+  .scheme-head h2 { font-size: 15px; font-weight: 700; color: var(--txt); }
+
+  .scheme {
+    background: #0D1117;
+    padding: 24px;
+    --s-surface: #161B22; --s-surface2: #1C2333; --s-border: #30363D;
+    --s-txt: #E6EDF3; --s-muted: #7D8590;
+    --s-blue: #3B82F6; --s-blue-d: rgba(59,130,246,.12);
+    --s-green: #22C55E; --s-green-d: rgba(34,197,94,.12);
+    --s-amber: #F59E0B; --s-amber-d: rgba(245,158,11,.12);
+    --s-red: #F87171; --s-red-d: rgba(248,113,113,.12);
+    color: var(--s-txt); font-size: 13px;
+  }
+
+  .s-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px; background: var(--s-surface);
+    border: 1px solid var(--s-border); border-radius: 8px;
+    margin-bottom: 24px; font-size: 12px; color: var(--s-muted);
+  }
+  .s-legend-item { display: flex; align-items: center; gap: 6px; }
+  .s-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  .s-section {
+    font-size: 10px; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--s-muted);
+    display: flex; align-items: center; gap: 8px; margin: 20px 0 12px;
+  }
+  .s-section::after { content: ""; flex: 1; height: 1px; background: var(--s-border); }
+
+  .s-flow { display: flex; flex-direction: column; }
+  .s-step { display: grid; grid-template-columns: 40px 1fr; gap: 0 12px; }
+  .s-left { display: flex; flex-direction: column; align-items: center; }
+  .s-num {
+    width: 32px; height: 32px; border-radius: 50%; border: 2px solid;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; background: var(--s-surface);
+    font-variant-numeric: tabular-nums; flex-shrink: 0;
+  }
+  .s-line { width: 2px; flex: 1; min-height: 12px; background: var(--s-border); margin: 3px 0; }
+  .s-line.last { display: none; }
+
+  .s-card {
+    background: var(--s-surface); border: 1px solid var(--s-border);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 6px;
+  }
+  .s-card-head {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 6px; margin-bottom: 6px;
+  }
+  .s-card-title { font-size: 13px; font-weight: 600; color: var(--s-txt); }
+  .s-card-desc { color: var(--s-muted); font-size: 12px; line-height: 1.5; }
+
+  .s-badge {
+    font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 4px; border: 1px solid; white-space: nowrap;
+  }
+  .sb-blue  { color: var(--s-blue);  border-color: var(--s-blue);  background: var(--s-blue-d); }
+  .sb-green { color: var(--s-green); border-color: var(--s-green); background: var(--s-green-d); }
+  .sb-amber { color: var(--s-amber); border-color: var(--s-amber); background: var(--s-amber-d); }
+  .sb-red   { color: var(--s-red);   border-color: var(--s-red);   background: var(--s-red-d); }
+
+  .sn-blue  { color: var(--s-blue);  border-color: var(--s-blue); }
+  .sn-green { color: var(--s-green); border-color: var(--s-green); }
+  .sn-amber { color: var(--s-amber); border-color: var(--s-amber); }
+  .sn-red   { color: var(--s-red);   border-color: var(--s-red); }
+
+  .s-subs { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--s-border); }
+  .s-sub { display: flex; gap: 8px; font-size: 12px; align-items: flex-start; }
+  .s-ico {
+    width: 20px; height: 20px; border-radius: 5px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 1px;
+  }
+  .si-blue  { background: var(--s-blue-d);  color: var(--s-blue); }
+  .si-green { background: var(--s-green-d); color: var(--s-green); }
+  .si-amber { background: var(--s-amber-d); color: var(--s-amber); }
+  .s-sub-lbl { color: var(--s-txt); font-weight: 500; }
+  .s-sub-note { color: var(--s-muted); font-size: 11px; }
+
+  .s-branch {
+    display: flex; gap: 10px; padding: 10px 12px; margin-top: 8px;
+    border: 1px solid var(--s-border); border-radius: 7px;
+    background: var(--s-surface2); font-size: 12px; color: var(--s-muted);
+  }
+  .s-branch strong { color: var(--s-txt); }
+
+  .s-roles { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .s-role { background: var(--s-surface); border: 1px solid var(--s-border); border-radius: 8px; padding: 12px 14px; }
+  .s-role-title { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--s-muted); margin-bottom: 8px; }
+  .s-role ul { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+  .s-role li { font-size: 12px; color: var(--s-txt); padding-left: 12px; position: relative; }
+  .s-role li::before { content: "→"; position: absolute; left: 0; color: var(--s-muted); }
+
+  .s-table-wrap { overflow-x: auto; margin-top: 0; }
+  .s-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .s-table th {
+    text-align: left; font-size: 10px; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--s-muted); padding: 8px 12px;
+    border-bottom: 1px solid var(--s-border); background: var(--s-surface); white-space: nowrap;
+  }
+  .s-table td { padding: 8px 12px; border-bottom: 1px solid var(--s-border); color: var(--s-txt); }
+  .s-table tr:last-child td { border-bottom: none; }
+  .s-table tr:hover td { background: var(--s-surface2); }
+  .sc-yes { color: var(--s-green); font-weight: 600; }
+  .sc-no  { color: var(--s-muted); }
+  .sc-opt { color: var(--s-amber); font-weight: 600; }
+
+  @media(max-width:520px) {
+    .s-roles { grid-template-columns: 1fr; }
+    .scheme { padding: 16px; }
     .block { padding: 20px 18px; }
   }
 </style>
@@ -162,11 +227,11 @@
 
   <div class="tag">Проект 2 · Водители</div>
   <h1>Система распределения заявок для водителей</h1>
-  <p class="lead">Заявка приходит, водители видят её в Telegram. Кто первый нажал, того рейс. Никаких звонков по кругу и хаоса в групповых чатах.</p>
+  <p class="lead">Заявка приходит, водители видят её в Telegram, MAX или WhatsApp. Кто первый нажал, того рейс. Никаких звонков по кругу и хаоса в чатах.</p>
 
   <div class="block">
     <h2>Что происходит сейчас</h2>
-    <p>Диспетчер обзванивает водителей вручную, пишет в общий чат. Кто первый ответит, того заказ. Кто-то не берёт трубку, кто-то взял и не поехал. Разбираться потом приходится тоже вручную.</p>
+    <p>Диспетчер обзванивает водителей вручную, пишет в общий чат. Кто первый ответит, того заказ. Кто-то не берёт трубку, кто-то взял и не поехал. Разбираться приходится тоже вручную.</p>
   </div>
 
   <div class="block">
@@ -197,7 +262,7 @@
         <div class="flow-num">4</div>
         <div class="flow-text">
           <div class="flow-title">Водитель ведёт статус</div>
-          <div class="flow-desc">Выехал, на месте, сдал — кнопками прямо в Telegram</div>
+          <div class="flow-desc">Выехал, на месте, сдал — кнопками прямо в мессенджере</div>
         </div>
       </div>
       <div class="flow-step">
@@ -207,6 +272,114 @@
           <div class="flow-desc">Система сама сигнализирует, не нужно следить</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- СХЕМА MVP -->
+  <div class="scheme-wrap">
+    <div class="scheme-head">
+      <div class="scheme-head-label">Техническая схема</div>
+      <h2>Как это устроено внутри — MVP</h2>
+    </div>
+    <div class="scheme">
+
+      <div class="s-legend">
+        <div class="s-legend-item"><div class="s-dot" style="background:#3B82F6"></div>Входящий поток</div>
+        <div class="s-legend-item"><div class="s-dot" style="background:#22C55E"></div>Успешный сценарий</div>
+        <div class="s-legend-item"><div class="s-dot" style="background:#F59E0B"></div>Распределение</div>
+        <div class="s-legend-item"><div class="s-dot" style="background:#F87171"></div>Эскалация</div>
+      </div>
+
+      <div class="s-section">Поток заявки</div>
+      <div class="s-flow">
+
+        <div class="s-step">
+          <div class="s-left"><div class="s-num sn-blue">1</div><div class="s-line"></div></div>
+          <div class="s-card">
+            <div class="s-card-head"><span class="s-card-title">Заявка создаётся</span><span class="s-badge sb-blue">Диспетчер</span></div>
+            <div class="s-card-desc">Тип груза, адрес подачи, назначение, время, тоннаж, комментарий.</div>
+            <div class="s-subs">
+              <div class="s-sub"><div class="s-ico si-blue">📋</div><div><div class="s-sub-lbl">Бот-команда /new_order</div><div class="s-sub-note">Запись в БД, статус: NEW</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-step">
+          <div class="s-left"><div class="s-num sn-amber">2</div><div class="s-line"></div></div>
+          <div class="s-card">
+            <div class="s-card-head"><span class="s-card-title">Рассылка пулу водителей</span><span class="s-badge sb-amber">Распределение</span></div>
+            <div class="s-card-desc">Карточка заявки с кнопкой «✅ Беру» — всем свободным одновременно.</div>
+            <div class="s-subs">
+              <div class="s-sub"><div class="s-ico si-amber">⏱️</div><div><div class="s-sub-lbl">Таймер 10 минут</div><div class="s-sub-note">Не взяли — эскалация на шаг 5</div></div></div>
+              <div class="s-sub"><div class="s-ico si-blue">🔁</div><div><div class="s-sub-lbl">Telegram + MAX + WhatsApp</div><div class="s-sub-note">Три канала параллельно, заявка не теряется</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-step">
+          <div class="s-left"><div class="s-num sn-green">3</div><div class="s-line"></div></div>
+          <div class="s-card">
+            <div class="s-card-head"><span class="s-card-title">Водитель нажимает «Беру»</span><span class="s-badge sb-green">Захват</span></div>
+            <div class="s-card-desc">Первый закрепляет заявку. У остальных кнопка гасится мгновенно.</div>
+            <div class="s-subs">
+              <div class="s-sub"><div class="s-ico si-green">🔒</div><div><div class="s-sub-lbl">Защита от двойного захвата</div><div class="s-sub-note">Статус: ACCEPTED, уведомление диспетчеру</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-step">
+          <div class="s-left"><div class="s-num sn-green">4</div><div class="s-line"></div></div>
+          <div class="s-card">
+            <div class="s-card-head"><span class="s-card-title">Статус-трекинг</span><span class="s-badge sb-green">Исполнение</span></div>
+            <div class="s-card-desc">Три кнопки в мессенджере: Выехал → На месте → Сдал. Каждая меняет статус и уведомляет диспетчера.</div>
+          </div>
+        </div>
+
+        <div class="s-step">
+          <div class="s-left"><div class="s-num sn-red">5</div><div class="s-line last"></div></div>
+          <div class="s-card">
+            <div class="s-card-head"><span class="s-card-title">Никто не взял — эскалация</span><span class="s-badge sb-red">Fallback</span></div>
+            <div class="s-card-desc">Автоматический алерт диспетчеру с кнопкой повторной рассылки.</div>
+            <div class="s-branch"><span>⚡</span><div><strong>Диспетчер получает сигнал</strong> с кнопкой повторить рассылку или взять в ручное управление</div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="s-section">Роли в системе</div>
+      <div class="s-roles">
+        <div class="s-role">
+          <div class="s-role-title">Диспетчер</div>
+          <ul><li>Создаёт заявки</li><li>Видит все статусы</li><li>Получает алерты</li><li>Закрывает вручную</li></ul>
+        </div>
+        <div class="s-role">
+          <div class="s-role-title">Водитель</div>
+          <ul><li>Получает карточки</li><li>Нажимает «Беру»</li><li>Меняет статус</li><li>TG / MAX / WhatsApp</li></ul>
+        </div>
+        <div class="s-role">
+          <div class="s-role-title">Бот-ядро</div>
+          <ul><li>Хранит заявки (БД)</li><li>Рассылает пулу</li><li>Блокирует дубли</li><li>3 канала сразу</li></ul>
+        </div>
+      </div>
+
+      <div class="s-section">Что входит в MVP</div>
+      <div class="s-table-wrap">
+        <table class="s-table">
+          <thead><tr><th>Функция</th><th>MVP</th><th>Потом</th></tr></thead>
+          <tbody>
+            <tr><td>Создание заявок диспетчером</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Рассылка + кнопка «Беру»</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Защита от двойного захвата</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Статусы: Выехал / На месте / Сдал</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Эскалация через 10 минут</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Три канала: Telegram, MAX, WhatsApp</td><td class="sc-yes">✓</td><td></td></tr>
+            <tr><td>Геолокация водителя</td><td class="sc-opt">опционально</td><td>V2</td></tr>
+            <tr><td>Расчёт оплаты и комиссий</td><td class="sc-no">—</td><td>V2</td></tr>
+            <tr><td>Аналитика и дашборд</td><td class="sc-no">—</td><td>V2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 
