@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бот для кузовного автосервиса · AGBLAB AI</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --card: #13151c;
+    --border: #1e2130;
+    --txt: #f0f2f7;
+    --muted: #7a8099;
+    --accent: #ff3b3b;
+    --accent2: #ff7a45;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box }
+  body {
+    background: var(--bg);
+    color: var(--txt);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 48px 20px 64px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  .top {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 40px;
+  }
+  .logo-txt {
+    font-size: 15px; font-weight: 700;
+    background: linear-gradient(120deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .back {
+    margin-left: auto; font-size: 13px; color: var(--muted);
+    text-decoration: none;
+  }
+  .back:hover { color: var(--txt); }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--accent);
+    background: rgba(255,59,59,.1); border: 1px solid rgba(255,59,59,.25);
+    border-radius: 6px; padding: 3px 10px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: clamp(24px, 5vw, 34px);
+    font-weight: 700; letter-spacing: -.5px;
+    margin-bottom: 12px; text-wrap: balance;
+  }
+  .lead {
+    color: var(--muted); font-size: 16px;
+    margin-bottom: 40px; text-wrap: balance;
+  }
+
+  .block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+  .block h2 {
+    font-size: 17px; font-weight: 700;
+    margin-bottom: 12px; color: var(--txt);
+  }
+  .block p {
+    color: var(--muted); font-size: 15px; line-height: 1.65;
+  }
+  .block p + p { margin-top: 10px; }
+
+  .list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-top: 4px;
+  }
+  .list li {
+    display: flex; gap: 10px; align-items: flex-start;
+    color: var(--muted); font-size: 15px;
+  }
+  .list li::before {
+    content: "→";
+    color: var(--accent); flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .divider { height: 1px; background: var(--border); margin: 36px 0; }
+
+  .cta p {
+    color: var(--muted); font-size: 15px; margin-bottom: 20px;
+    text-wrap: balance;
+  }
+  .cta strong { color: var(--txt); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 13px 26px; border-radius: 12px;
+    text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(255,59,59,.3);
+  }
+
+  .footer {
+    margin-top: 56px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+  }
+  .footer a { color: var(--muted); text-decoration: none; }
+  .footer a:hover { color: var(--txt); }
+
+  @media(max-width: 480px) {
+    .block { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <span class="logo-txt">AGBLAB AI</span>
+    <a class="back" href="index.html">← Все предложения</a>
+  </div>
+
+  <div class="tag">Проект 1 · Автосервис</div>
+  <h1>Бот-администратор для кузовного грузового сервиса</h1>
+  <p class="lead">Отвечает клиентам круглосуточно, собирает заявки и передаёт мастеру — без потерь и без лишней нагрузки на менеджера.</p>
+
+  <div class="block">
+    <h2>Что происходит сейчас</h2>
+    <p>Клиент пишет в нерабочее время — никто не отвечает. Звонит — занято. Уходит к конкурентам. Или всё-таки дозванивается, но менеджер тратит 15 минут на то, чтобы понять объём работ и записать данные.</p>
+  </div>
+
+  <div class="block">
+    <h2>Что делает бот</h2>
+    <ul class="list">
+      <li>Принимает сообщения в Telegram и WhatsApp в любое время суток</li>
+      <li>Спрашивает что случилось, просит фото, уточняет тип кузова и объём работ</li>
+      <li>Собирает всё в готовую заявку и отправляет мастеру</li>
+      <li>Отвечает на типовые вопросы: сроки, адрес, что входит в ремонт</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>Что вы получаете</h2>
+    <p>Клиент написал в 22:00 — утром мастер видит оформленную заявку с фото и описанием. Менеджер занимается только живой работой, не первичкой. Заявки перестают теряться.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta">
+    <p><strong>Сначала разбираем ваши процессы:</strong> как всё устроено сейчас, где теряются клиенты. После этого даём точные сроки и стоимость. Занимает 20–30 минут.</p>
+    <a class="btn" href="https://t.me/agblab_ai">Написать в Telegram →</a>
+  </div>
+
+  <div class="footer">
+    <span>AGBLAB AI · студия AI-автоматизации</span>
+    <a href="https://agblabai.ru">agblabai.ru</a>
+  </div>
+
+</div>
+</body>
+</html>
