@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Предложение · AGBLAB AI</title>
+<style>
+  :root {
+    --bg: #0b0c10;
+    --card: #13151c;
+    --border: #1e2130;
+    --txt: #f0f2f7;
+    --muted: #7a8099;
+    --accent: #ff3b3b;
+    --accent2: #ff7a45;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box }
+  body {
+    background: var(--bg);
+    color: var(--txt);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 48px 20px 64px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+
+  /* top */
+  .top {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 40px;
+  }
+  .logo-txt {
+    font-size: 15px; font-weight: 700; letter-spacing: .02em;
+    background: linear-gradient(120deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .dot-live {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+    margin-left: auto;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,59,59,.5) }
+    70%  { box-shadow: 0 0 0 8px transparent }
+    100% { box-shadow: 0 0 0 0 transparent }
+  }
+
+  /* intro */
+  .intro { margin-bottom: 36px; }
+  .intro h1 {
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight: 700; letter-spacing: -.5px;
+    margin-bottom: 10px;
+    text-wrap: balance;
+  }
+  .intro p { color: var(--muted); font-size: 15px; }
+
+  /* cards */
+  .cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+  }
+  .card-num {
+    font-size: 11px; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .card h2 {
+    font-size: 19px; font-weight: 700; letter-spacing: -.3px;
+    margin-bottom: 14px; text-wrap: balance;
+  }
+  .card p {
+    color: var(--muted); font-size: 15px; line-height: 1.65;
+  }
+  .card p + p { margin-top: 10px; }
+
+  /* divider */
+  .divider {
+    height: 1px; background: var(--border); margin: 36px 0;
+  }
+
+  /* cta block */
+  .cta-block { }
+  .cta-block p {
+    color: var(--muted); font-size: 15px; margin-bottom: 20px;
+    text-wrap: balance;
+  }
+  .cta-block strong { color: var(--txt); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent);
+    color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px 26px; border-radius: 12px;
+    text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(255,59,59,.3);
+  }
+
+  /* footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+  }
+  .footer a { color: var(--muted); text-decoration: none; }
+  .footer a:hover { color: var(--txt); }
+
+  @media(max-width: 480px) {
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <span class="logo-txt">AGBLAB AI</span>
+    <div class="dot-live"></div>
+  </div>
+
+  <div class="intro">
+    <h1>Что мы предлагаем</h1>
+    <p>Разобрали два ваших запроса. Вот что это такое на самом деле и что вы получите.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-num">Проект 1: Автосервис</div>
+      <h2>Бот-администратор для кузовного сервиса</h2>
+      <p>Клиент пишет в Telegram или WhatsApp, бот отвечает сразу в любое время. Спрашивает что случилось, просит фото, уточняет тип кузова и объём работ.</p>
+      <p>Всё это собирается в заявку и уходит мастеру. Он видит нормальный заказ, а не «перезвоните мне». Вы не теряете клиентов ночью и в выходные, менеджер не тратит время на первичку.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-num">Проект 2: Водители</div>
+      <h2>Система распределения заявок для водителей</h2>
+      <p>Диспетчер создаёт заявку, система сама рассылает её всем свободным водителям. Кто первый нажал «Беру» — того и заказ, остальные видят что уже занято.</p>
+      <p>Водитель отмечает статусы прямо в Telegram: выехал, на месте, сдал. Если никто не взял за 10 минут, диспетчер получает сигнал. Никаких звонков по кругу, никакого хаоса в чатах. Работает в Telegram, с резервом через MAX.</p>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta-block">
+    <p>По каждому проекту <strong>сначала разбираем ваши процессы:</strong> как всё устроено сейчас, где теряете время и деньги. После этого даём точные сроки и стоимость. Занимает 20–30 минут.</p>
+    <a class="btn" href="https://t.me/agblab_ai">Написать в Telegram →</a>
+  </div>
+
+  <div class="footer">
+    <span>AGBLAB AI · студия AI-автоматизации</span>
+    <a href="https://agblabai.ru">agblabai.ru</a>
+  </div>
+
+</div>
+</body>
+</html>
